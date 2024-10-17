@@ -15,9 +15,9 @@ TASK:
 */
 
 // 1) quante celle ha questo tabellone? 90
+const tabellone = document.getElementById("tabellone");
 
 const createCells = function () {
-  const tabellone = document.getElementById("tabellone");
   for (let i = 0; i < 90; i++) {
     const cellDiv = document.createElement("div");
     cellDiv.classList.add("cell");
@@ -37,6 +37,17 @@ const estraiBtn = function () {
   button.onclick = function (e) {
     const casualNum = Math.ceil(Math.random() * 90);
     console.log(casualNum);
+
+    // task 4
+    const children = tabellone.querySelectorAll("div");
+    console.log(children);
+
+    for (let i = 0; i < children.length; i++) {
+      const child = children[i];
+      if (casualNum === i + 1) {
+        child.classList.add("sorted");
+      }
+    }
   };
 };
 estraiBtn();

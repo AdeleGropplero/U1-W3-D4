@@ -34,3 +34,19 @@ body {
   margin: 0;
   padding: 10px;
 }
+
+.sorted {
+  color: rgb(240, 0, 240);
+  background-color: rgb(215, 147, 215);
+}
+
+.dot {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #7a408a;
+}
