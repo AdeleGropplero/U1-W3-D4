@@ -32,15 +32,24 @@ const createCells = function () {
 };
 createCells();
 
+let sortedNumbers = [];
+
 const estraiBtn = function () {
   const button = document.getElementById("estrai");
   button.onclick = function (e) {
-    const casualNum = Math.ceil(Math.random() * 90);
+    let casualNum = null;
+
+    if (sortedNumbers.includes(casualNum)) {
+      do {
+        casualNum = Math.ceil(Math.random() * 90);
+      } while (sortedNumbers.includes(casualNum));
+    }
+
     console.log(casualNum);
+    sortedNumbers.push(casualNum);
 
     // task 4
     const children = tabellone.querySelectorAll("div");
-    console.log(children);
 
     for (let i = 0; i < children.length; i++) {
       const child = children[i];
@@ -48,6 +57,12 @@ const estraiBtn = function () {
         child.classList.add("sorted");
       }
     }
+    console.log(sortedNumbers);
+    /*  if (casualNum !== sortedNumbers[i]) {
+        true
+    } else {
+
+    }*/
   };
 };
 estraiBtn();
