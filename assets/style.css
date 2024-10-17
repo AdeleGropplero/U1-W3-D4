@@ -1,0 +1,36 @@
+body {
+  text-align: center;
+  padding-bottom: 40px;
+  box-sizing: border-box;
+}
+
+#tabellone {
+  width: 80%;
+  display: inline-block;
+  margin-bottom: 15px;
+  background-color: #0c0b1d;
+  color: #ebebeb;
+  border-radius: 8px;
+  border: 8px solid #0c0b1d;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#tabellone div {
+  display: inline-block;
+  margin: 5px;
+  border: solid 1px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 10px;
+  background-color: #120d30a8;
+}
+
+#tabellone div h3 {
+  text-align: center;
+  font-size: 25px;
+  margin: 0;
+  padding: 10px;
+}
